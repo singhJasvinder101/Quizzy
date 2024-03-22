@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type="range"] {
+  -webkit-appearance: none;
+  /* Remove default styles for WebKit browsers */
+  width: 100%;
+  height: 10px;
+  background: #FFA500;
+  /* Set background color to orange */
+  outline: none;
+  border-radius: 5px;
+  /* Optional: Add border-radius for rounded corners */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #FFA500;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #FFA500;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Optional: Style the track (bar) */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 10px;
+  background: #ddd;
+  border-radius: 5px;
+}
+
+input[type="range"]::-moz-range-track {
+  height: 10px;
+  background: #ddd;
+  border-radius: 5px;
+}
+
+.wrapper {
+  @apply min-h-[100dvh] w-full bg-gray-300 flex items-center justify-center;
+}
+
+.heading {
+  @apply text-2xl lg:text-4xl font-extrabold text-orange-500 tracking-wide text-center py-2;
+}
+
+.option.correct {
+  @apply text-white bg-green-500;
+}
+
+.option.incorrect {
+  @apply text-white bg-red-500;
+}
+
+.option {
+  @apply text-black flex bg-white font-bold rounded-md text-sm lg:text-base py-3 px-4 cursor-pointer disabled:cursor-default;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #565050;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f9ecec;
+  border-radius: 10px;
+}
